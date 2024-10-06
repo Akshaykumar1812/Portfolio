@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900& display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*hero part */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: #242525;
+    /* background-image: url(../images/background.jpeg);*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.abouthero {
+  height: 250vh;
+  width: 100%;
+  background-color: #242525;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+
+/* Navigation Bar */
+header {
+    background-color:transparent;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
+}
+
+header.scrolled {
+  background-color: rgba(7, 7, 7, 0.7); /* Black translucent background */
+  backdrop-filter: blur(2px); /* Optional: adds a subtle blur effect */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 10px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo h1 span{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    padding: 10px 15px;
+    display: inline-block;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 10pxpx;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links li a:hover {
+    color: #ffa500; 
+}
+
+.nav-links li a.active, /* Active state styles */
+.nav-links li a:hover {
+    color: #ffa500; /* Active and hover color */
+}
+
+.nav-links li i {
+    margin-right: 2px;
+}
+
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    background: #ffa500;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after { /* Add active state here */
+    transform: scaleX(1);
+}
+
+
+/* index content */
+
+.name{
+    position: relative;
+    padding-left: 50px;
+    padding-top: 20px;
+    position: absolute;
+    top:50%;
+    left: 8%;
+    transform: translateY(-50%);
+    flex: 1;
+}
+
+.name .content h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.name .content h1 {
+    font-size: 4em;
+    margin-bottom: 30px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* home page center photo add and effect */
+
+.left-container {
+  background-color: #242525;
+  width: 70%;
+}
+
+.right-container {
+  width: 30%;
+  height: 100vh;
+  background: linear-gradient(-45deg ,#3877ff , #262525); 
+  float: right; /* Align it to the right */
+}
+
+
+.design .circle{
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50% , -50%);
+  
+}
+
+.circle:nth-child(1){
+  background: linear-gradient(90deg , transparent 50%,  red 50% , #262525 50%);
+  width: 30rem;
+}
+
+.circle:nth-child(2){
+  width: 23rem;
+  background: white;
+  background-image: url(../images/background.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1rem solid #fff;
+  box-shadow: 0 0 1rem white , inset 0 0 1rem white, 0 0 2rem #3877ff ,inset 0 0 2rem #3877ff,0 0 4em #3877ff,inset 0 0 4rem #3877ff;
+}
+
+ 
+/* footer */
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer p, .footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #40ff53;
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Social Icons Image Styling */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons a:hover img {
+    filter: none; /* Original color on hover */
+}
+
+/* Copyright Text */
+.copyright {
+    margin-top: 50px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-icons {
+        margin: 10px 0;
+    }
+    
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* back to top */ 
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  background-color: rgba(1, 5, 246, 1); 
+  color: white;
+  padding: 10px; 
+  border-radius: 50%; 
+  text-align: center; 
+  text-decoration: none; 
+  font-size: 18px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s; 
+  z-index: 1000; 
+}
+
+.back-to-top:hover {
+  background-color: rgba(0, 90, 255, 1); 
+}
+
+
+
+/*--- Page Titles & Breadcrumbs----*/
+
+.page-title {
+  background-color: #262525; /* Light background color */
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  position: relative;
+  top: 150px; /* Moves the h1 down 50px */
+}
+
+.heading p {
+  font-size: 18px;
+  margin-bottom: 0;
+  color: white;
+}
+
+.breadcrumbs {
+  background-color: #85b9f5;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 200px;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: left; /* Aligns the logo to the left */
+  padding-left: 160px; 
+}
+
+.breadcrumbs ol li {
+  font-size: 16px;
+  color:#007bff; /* Link color */
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.breadcrumbs ol li::after {
+  content: "/";
+  margin-left: 5px;
+}
+
+.breadcrumbs ol li.current {
+  color: #444444;
+  pointer-events: none; 
+}
+
+.breadcrumbs ol li.current::after {
+  content: "";
+}
+
+.breadcrumbs ol li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s;
+}
+
+.breadcrumbs ol li a:hover {
+  color: red;
+}
+
+/* about section 1*/
+
+.about {
+  background-image: url(../images/aboutbg.jpeg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 60px 0;
+  color: #fff;
+  box-shadow: 0 0 8rem white ;
+}
+
+.profile-pic {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: -150px; /* overlapp on the background image border */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about {
+  height: 100vh; 
+  background-color: #f8f9fa; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+/* about section 2 */
+
+.about-details {
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: #262525; /* Set a background color */
+}
+
+.abttext { 
+  text-align: center; 
+  color: white; 
+}
+
+.abttext h2{
+   font-size: 50px;
+   margin-top: 90px; 
+    margin-bottom: 20px; 
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.abttext .subhead{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.abttext .abtcontent{
+    font-size: 20px; 
+    text-align: justify; 
+    line-height: 2; 
+    margin: 20px 160px;
+    margin-top: 80px; 
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.rows {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 50px; 
+}
+
+.rows .col1, .rows .col2 {
+  flex: 1; 
+  padding: 0 100px; 
+}
+
+.rows .col1 {
+  text-align: left;
+  margin-left: 230px;
+  line-height: 4;
+}
+
+.rows .col2 {
+  text-align: left;
+  margin-left: -200px;
+  line-height: 4;
+}
+
+.rows ul {
+  list-style-type:none; 
+  padding: 0; 
+}
+
+.rows ul li strong {
+  font-weight: bold;
+  margin-right: 5px; /* Adds space between strong and span */
+}
+
+ .rows ul li span{
+  letter-spacing: 2;
+  margin-left: 5px;
+ }
+
+ .rows ul li i {
+  color: rgb(3, 243, 3); 
+  margin-right: 10px; 
+  font-size: 1.2em; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
