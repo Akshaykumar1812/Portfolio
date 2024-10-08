@@ -18,7 +18,16 @@
 }
 
 .abouthero {
-  height: 300vh;
+  height: 380vh;
+  width: 100%;
+  background-color: #242525;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+.eduhero {
+  height: 100vh;
   width: 100%;
   background-color: #242525;
   background-size: cover;
@@ -29,7 +38,7 @@
 
 /* Navigation Bar */
 header {
-    background-color:transparent;
+    background-color:rgb(0, 0, 0);
     padding: 10px 0;
     width: 100%;
     position: fixed;
@@ -103,7 +112,7 @@ header.scrolled {
 .nav-links li a::after{
     content: "";
     position: absolute;
-    background: #ffa500;
+    background: #b3790d;
     width: 100%;
     height: .1rem;
     left: 0;
@@ -293,6 +302,7 @@ footer .container {
   background-color: #262525; /* Light background color */
   padding: 5px 0px;
   text-align: center;
+  height: 45.7vh;
 }
 
 .heading h1 {
@@ -368,7 +378,7 @@ footer .container {
   position: relative;
   padding: 60px 0;
   color: #fff;
-  box-shadow: 0 0 8rem white ;
+  /* box-shadow: 0 0 8rem white ;*/
   height: 100vh; 
   background-color: #f8f9fa; 
   display: flex; 
@@ -398,6 +408,7 @@ footer .container {
   justify-content: center; 
   align-items: center; 
   background-color: #242525; /* Set a background color */
+  height: 800px;
 }
 
 .abttext { 
@@ -474,7 +485,7 @@ footer .container {
 /* about skill details */
 
 .skills-details {
-    height: 55vh;
+    height: 60vh;
     position: relative;
     padding: 20px;
     background-color: #242525; 
@@ -529,14 +540,14 @@ footer .container {
   text-align: left;
   margin-left: 230px;
   line-height: 6;
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 .skrow .skcol2 {
   text-align: left;
   margin-left: -200px;
   line-height: 6;
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .progress1, .progress2, .progress3, .progress4 {
@@ -548,7 +559,7 @@ footer .container {
   display: flex;
   justify-content: space-between;
   margin-bottom:-30px;
-  margin-right: 130px;
+  margin-right: 70px;
 }
 
 
@@ -566,34 +577,99 @@ footer .container {
   height: 100%;
 }
 
+/* About hobby details */
+
+.hobby-details{
+    height: 65vh;
+    position: relative;
+    padding: 20px;
+    background-color: #242525;
+}
+
+.hobby-details h2 {
+  text-align: left;
+  margin-bottom: 20;
+  font-size: 26px;
+  color: rgb(213, 206, 206);
+  font-size: 20px; 
+  margin: 2px 100px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  padding-left: 70px;
+}
+
+.hobby-line {
+  flex-grow: 3; 
+  border: none; 
+  height: 2px; 
+  background-color: grey;
+  margin-left: 170px; 
+  margin-right: 170px;
+}
+
+.hobby-details .hbsub {
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  color: white;
+  margin: 0 100px;
+  padding-left: 70px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hbrow {
+  display: flex;                  
+  justify-content: space-between; 
+  align-items: center;            
+  margin: 21px 0;                 
+  padding: 0 50px;                
+}
+
+.hbcol1, .hbcol2, .hbcol3 {
+  flex: 1;                        
+  margin: 100px 15px;                 
+  display: flex;
+  justify-content: center;        
+}
+
+.hbox1, .hbox2, .hbox3{
+  background: linear-gradient(to bottom, #4a90e2, #5cb85c);       
+  border-radius: 7px;            
+  padding: 15px;                  
+  width: 100%;                   
+  max-width: 300px;               
+  height: 100px;                 
+  display: flex;                  
+  flex-direction: column;         
+  justify-content: center;        
+  align-items: center;          
+  text-align: center;
+  transition: box-shadow 0.2s ease;                                
+}
+
+.hbox1:hover, .hbox2:hover, .hbox3:hover {
+  box-shadow: 0 0 1rem rgb(3, 243, 3);
+}
+.hbox1 { 
+  margin-left: 80px;            
+}
 
 
+.hbox3 {
+  margin-right: 80px;      
+}
 
 
+.hbrow i {
+  font-size: 20px; /* Adjust icon size */
+  color: black;
+}
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.hobby-title {
+  margin-top: 10px;  /* Space between icon and title */
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
