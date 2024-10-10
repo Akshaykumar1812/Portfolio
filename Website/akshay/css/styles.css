@@ -716,22 +716,22 @@ footer .container {
   justify-content: center;
   align-items: center;
   background-color: #242525;
-  /* Set a background color */
   height: 200vh;
   margin-left: -40px;
+  position: relative;
 }
 
-.qrow1,
-.qrow2,
-.qrow3 {
+.qrow1, .qrow2, .qrow3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   margin-bottom: 80px;
   width: 76%;
-  background-color: #504c4c;
-  border: 2px solid #a39f9f;
+  /*background-color: #504c4c;
+  border: 2px solid #a39f9f;*/
+  background-color: #242525;
+  border: 2px solid #242525;
   border-radius: 8px;
   height: 50vh;
   margin-left: 30px;
@@ -740,6 +740,51 @@ footer .container {
 .qcol1 {
   max-width: 50%;
   margin-left: 40px;
+  position: relative;
+}
+
+/* Vertical line */
+.qcol1::before {
+  content: "";
+  position: absolute;
+  top: 25px; 
+  left: -50px; 
+  width: 2px; 
+  height: 200px; 
+  background-color: rgb(3, 243, 3);
+}
+
+
+/* Circle at the top */
+.qcol1::after {
+  content: "";
+  position: absolute;
+  top: 25px; 
+  left: -57px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #242525;
+  border: 3px solid rgb(3, 243, 3);
+}
+
+/* Bottom circle */
+.qcol1 .circle-bottom {
+  content: "";
+  position: absolute;
+  bottom: 60px; 
+  left: -57.5px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #242525;
+  border: 3px solid rgb(3, 243, 3);
+}
+
+
+.institution-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .qualdetails {
@@ -755,7 +800,6 @@ footer .container {
   text-transform: uppercase;
 }
 
-
 .qualdetails p {
   font-size: 16px;
   color: white;
@@ -769,7 +813,6 @@ footer .container {
   margin-left: 5px;
   letter-spacing: 1;
   font-family: 'Poppins', sans-serif;
-
 }
 
 .qcol2 {
@@ -780,5 +823,8 @@ footer .container {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(134, 127, 127, 0.1);
+  box-shadow: 0 0 1rem white;
+  width: 530px; 
+  height: 250px; 
 }
+
